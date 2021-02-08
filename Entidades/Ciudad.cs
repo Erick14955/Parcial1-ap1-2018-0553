@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Parcial1_ap1_2018_0553.Entidades
 {
-    class Ciudad
+    public class Ciudad
     {
         [Key]
         public int CiudadID { get; set; }

@@ -17,5 +17,20 @@ namespace Parcial1_ap1_2018_0553
             InitializeComponent();
         }
 
+        private void Limpiar()
+        {
+            IDnumericUpDown.Value = 0;
+            NombretextBox.Clear();
+        }
+
+        private void Nuevobutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

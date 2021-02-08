@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Parcial1_ap1_2018_0553.DAL
 {
-    class Contexto : DbContext
+    public class Contexto : DbContext
     {
 
         public DbSet<Ciudad> Ciudad { get; set; }
