@@ -1,7 +1,7 @@
 ﻿
 namespace Parcial1_ap1_2018_0553
 {
-    partial class Form1
+    partial class Registro_Ciudades
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,10 +29,19 @@ namespace Parcial1_ap1_2018_0553
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Registro_Ciudades
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Name = "Registro_Ciudades";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Registro de Ciudades";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
