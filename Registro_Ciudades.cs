@@ -102,12 +102,12 @@ namespace Parcial1_ap1_2018_0553
             if (!ExisteEnLaBaseDeDatos())
             {
                 Limpiar();
-                MessageBox.Show("Usuario guardado correctamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ciudad guardada correctamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 Limpiar();
-                MessageBox.Show("Usuario modificado correctamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ciudad modificada correctamente", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -119,7 +119,7 @@ namespace Parcial1_ap1_2018_0553
             Limpiar();
             if (CiudadBLL.Eliminar(id))
             {
-                MessageBox.Show("Usuario eliminado correctamente", "Proceso exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ciudad eliminada correctamente", "Proceso exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
