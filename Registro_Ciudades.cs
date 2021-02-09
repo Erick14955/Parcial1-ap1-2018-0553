@@ -42,6 +42,7 @@ namespace Parcial1_ap1_2018_0553
 
         private void Nuevobutton_Click(object sender, EventArgs e)
         {
+            ErroreserrorProvider.Clear();
             Limpiar();
         }
 
@@ -72,8 +73,25 @@ namespace Parcial1_ap1_2018_0553
 
             if(NombretextBox.Text == string.Empty)
             {
+                MessageBox.Show("Este campo no puede quedar vacio");
                 ErroreserrorProvider.SetError(NombretextBox, "Este campo no puede quedar vacio");
                 NombretextBox.Focus();
+                paso = false;
+            }
+
+            if (CiudadBLL.ExisteCiudad(NombretextBox.Text))
+            {
+                MessageBox.Show("Este nombre de ciudad ya existe en la base de datos");
+                ErroreserrorProvider.SetError(NombretextBox, "Este nombre de ciudad ya existe en la base de datos");
+                NombretextBox.Focus();
+                paso = false;
+            }
+
+            if (CiudadBLL.Existe((int)IDnumericUpDown.Value))
+            {
+                MessageBox.Show("Este id de ciudad ya existe en la base de datos");
+                ErroreserrorProvider.SetError(IDnumericUpDown, "Este id de ciudad ya existe en la base de datos");
+                IDnumericUpDown.Focus();
                 paso = false;
             }
 
@@ -89,6 +107,7 @@ namespace Parcial1_ap1_2018_0553
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
+            ErroreserrorProvider.Clear();
             Ciudad ciudad;
             bool paso = false;
             if (!Validar())

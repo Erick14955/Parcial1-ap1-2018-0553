@@ -128,5 +128,25 @@ namespace Parcial1_ap1_2018_0553.BLL
 
             return ciudad;
         }
+
+        public static bool ExisteCiudad(string ciudad)
+        {
+            Contexto contexto = new Contexto();
+            bool encontrado = false;
+            try
+            {
+                encontrado = contexto.Ciudad.Any(e => e.Nombre_Ciudad == ciudad);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+
+            return encontrado;
+        }
     }
 }
