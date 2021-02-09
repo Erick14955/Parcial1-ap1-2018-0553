@@ -29,6 +29,7 @@ namespace Parcial1_ap1_2018_0553
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro_Ciudades));
             this.CiudadIdlabel = new System.Windows.Forms.Label();
             this.Nombrelabel = new System.Windows.Forms.Label();
@@ -38,7 +39,9 @@ namespace Parcial1_ap1_2018_0553
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.ErroreserrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErroreserrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // CiudadIdlabel
@@ -111,6 +114,7 @@ namespace Parcial1_ap1_2018_0553
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Eliminarbutton
             // 
@@ -122,6 +126,11 @@ namespace Parcial1_ap1_2018_0553
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            // 
+            // ErroreserrorProvider
+            // 
+            this.ErroreserrorProvider.ContainerControl = this;
             // 
             // Registro_Ciudades
             // 
@@ -142,6 +151,7 @@ namespace Parcial1_ap1_2018_0553
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de Ciudades";
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErroreserrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,6 +167,7 @@ namespace Parcial1_ap1_2018_0553
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
+        private System.Windows.Forms.ErrorProvider ErroreserrorProvider;
     }
 }
 
